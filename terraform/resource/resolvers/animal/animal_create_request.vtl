@@ -1,0 +1,14 @@
+{
+  "version": "2017-02-28",
+  "operation": "PutItem",
+  "key": {
+    "animal_name": $util.dynamodb.toDynamoDBJson($ctx.args.input.animal_name),
+  },
+  "attributeValues": $util.dynamodb.toMapValuesJson($ctx.args.input),
+  "condition": {
+    "expression": "attribute_not_exists(#animal_name)",
+    "expressionNames": {
+      "#animal_name": "animal_name",
+    },
+  },
+}

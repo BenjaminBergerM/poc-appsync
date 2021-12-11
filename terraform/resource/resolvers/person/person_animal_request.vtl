@@ -1,0 +1,7 @@
+{
+    "version": "2017-02-28",
+    "operation": "GetItem",
+    "key": {
+        "animal_name": $util.dynamodb.toDynamoDBJson($ctx.source.animal),
+    }
+}

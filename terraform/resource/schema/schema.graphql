@@ -1,0 +1,97 @@
+type Query {
+    getPocPersonTable(uid: String!): PocPersonTable
+    getPocAnimalTable(animal_name: String!): PocAnimalTable
+    getPocCompanyTable(id: String!): PocCompanyTable
+}
+
+type Mutation {
+    createPocPersonTable(input: CreatePocPersonTableInput!): PocPersonTable
+    updatePocPersonTable(input: UpdatePocPersonTableInput!): PocPersonTable
+    deletePocPersonTable(input: DeletePocPersonTableInput!): PocPersonTable
+
+    createPocAnimalTable(input: CreatePocAnimalTableInput!): PocAnimalTable
+    updatePocAnimalTable(input: UpdatePocAnimalTableInput!): PocAnimalTable
+    deletePocAnimalTable(input: DeletePocAnimalTableInput!): PocAnimalTable
+
+    createPocCompanyTable(input: CreatePocCompanyTableInput!): PocCompanyTable
+    updatePocCompanyTable(input: UpdatePocCompanyTableInput!): PocCompanyTable
+    deletePocCompanyTable(input: DeletePocCompanyTableInput!): PocCompanyTable
+}
+
+input CreatePocPersonTableInput {
+    uid: String!
+    name: String!
+    last_name: String
+    age: String
+    animal: String!
+    company: String!
+}
+
+input UpdatePocPersonTableInput {
+    uid: String!
+    name: String
+    last_name: String
+    age: String
+    animal: String
+    company: String
+}
+
+input DeletePocPersonTableInput {
+    uid: String!
+}
+
+type PocPersonTable {
+    uid: String!
+    name: String!
+    last_name: String
+    age: String
+    animal: PocAnimalTable!
+    company: PocCompanyTable!
+}
+
+type PocAnimalTable {
+    animal_name: String!
+    kind: String!
+    sound: String!
+}
+
+input CreatePocAnimalTableInput {
+    animal_name: String!
+    kind: String!
+    sound: String!
+}
+
+input UpdatePocAnimalTableInput {
+    animal_name: String!
+    kind: String
+    sound: String
+}
+
+input DeletePocAnimalTableInput {
+    animal_name: String!
+}
+
+type PocCompanyTable {
+    id: String!
+    name: String!
+    phone: String!
+    address: String!
+}
+
+input CreatePocCompanyTableInput {
+    id: String!
+    name: String!
+    phone: String!
+    address: String!
+}
+
+input UpdatePocCompanyTableInput {
+    id: String!
+    name: String
+    phone: String
+    address: String
+}
+
+input DeletePocCompanyTableInput {
+    id: String!
+}
