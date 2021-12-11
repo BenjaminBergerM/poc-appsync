@@ -58,10 +58,11 @@ data "aws_iam_policy_document" "api_appsync_invoke_lambda" {
       "lambda:InvokeFunction"
     ]
     resources = [
-      aws_lambda_function.poc_create_company_lambda.arn,
-      aws_lambda_function.poc_update_company_lambda.arn,
-      aws_lambda_function.poc_delete_company_lambda.arn,
-      aws_lambda_function.poc_get_company_lambda.arn,
+      # aws_lambda_function.poc_create_enrollment_lambda.arn,
+      # aws_lambda_function.poc_update_enrollment_lambda.arn,
+      # aws_lambda_function.poc_delete_enrollment_lambda.arn,
+      # aws_lambda_function.poc_get_enrollment_lambda.arn,
+      "arn:aws:lambda:us-east-1:553300625097:function:enrollments-qa-enrollment-products-getall"
     ]
   }
 }

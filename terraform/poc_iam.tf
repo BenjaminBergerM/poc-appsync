@@ -17,19 +17,9 @@ resource "aws_iam_role" "poc_lambda_role" {
 EOF
 }
 
-resource "aws_iam_policy" "poc_dynamo_policy" {
-  name   = "poc_dynamo_policy_all"
-  policy = data.aws_iam_policy_document.dynamo_access_policy.json
-}
-
 resource "aws_iam_policy" "poc_default_policy" {
   name   = "poc_default_policy_all"
   policy = data.aws_iam_policy_document.default_lambda_policy.json
-}
-
-resource "aws_iam_role_policy_attachment" "poc_lambda_to_dynamo" {
-  role       = aws_iam_role.poc_lambda_role.name
-  policy_arn = aws_iam_policy.poc_dynamo_policy.arn
 }
 
 resource "aws_iam_role_policy_attachment" "poc_lambda_to_default" {
@@ -46,10 +36,4 @@ resource "aws_iam_role_policy" "api_to_lambda_policy" {
   name   = "poc_appsync_to_lambdas_policy"
   role   = aws_iam_role.appsync_api.id
   policy = data.aws_iam_policy_document.api_appsync_invoke_lambda.json
-}
-
-resource "aws_iam_role_policy" "api_to_dynamo_policy" {
-  name   = "poc_appsync_to_dynamo_policy"
-  role   = aws_iam_role.appsync_api.id
-  policy = data.aws_iam_policy_document.dynamo_access_policy.json
 }
