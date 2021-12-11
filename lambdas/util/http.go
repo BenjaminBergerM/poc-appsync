@@ -3,9 +3,10 @@ package util
 import (
 	"encoding/json"
 	"fmt"
+
 	"github.com/aws/aws-lambda-go/events"
 
-	"github.com/jjoc007/poc-appsync-golang-mongo/log"
+	"github.com/BenjaminBergerM/poc-appsync-golang-mongo/log"
 
 	"net/http"
 )

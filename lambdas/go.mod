@@ -1,4 +1,4 @@
-module github.com/jjoc007/poc-appsync-golang-mongo
+module github.com/BenjaminBergerM/poc-appsync-golang-mongo
 
 go 1.15
 

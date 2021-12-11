@@ -1,10 +1,10 @@
 package company
 
 import (
-	"github.com/jjoc007/poc-appsync-golang-mongo/config/db"
-	"github.com/jjoc007/poc-appsync-golang-mongo/log"
-	repositorycompany "github.com/jjoc007/poc-appsync-golang-mongo/repository/company"
-	servicecompany "github.com/jjoc007/poc-appsync-golang-mongo/service/company"
+	"github.com/BenjaminBergerM/poc-appsync-golang-mongo/config/db"
+	"github.com/BenjaminBergerM/poc-appsync-golang-mongo/log"
+	repositorycompany "github.com/BenjaminBergerM/poc-appsync-golang-mongo/repository/company"
+	servicecompany "github.com/BenjaminBergerM/poc-appsync-golang-mongo/service/company"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 

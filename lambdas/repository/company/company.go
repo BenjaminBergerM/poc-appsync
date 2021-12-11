@@ -4,13 +4,14 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	companymodel "github.com/jjoc007/poc-appsync-golang-mongo/model/company"
+
+	companymodel "github.com/BenjaminBergerM/poc-appsync-golang-mongo/model/company"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"github.com/jjoc007/poc-appsync-golang-mongo/config"
-	"github.com/jjoc007/poc-appsync-golang-mongo/log"
+	"github.com/BenjaminBergerM/poc-appsync-golang-mongo/config"
+	"github.com/BenjaminBergerM/poc-appsync-golang-mongo/log"
 )
 
 // CompanyRepository describes the company repository.

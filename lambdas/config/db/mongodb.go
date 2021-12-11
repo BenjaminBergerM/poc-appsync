@@ -2,8 +2,9 @@ package db
 
 import (
 	"context"
-	"github.com/jjoc007/poc-appsync-golang-mongo/config"
-	"github.com/jjoc007/poc-appsync-golang-mongo/log"
+
+	"github.com/BenjaminBergerM/poc-appsync-golang-mongo/config"
+	"github.com/BenjaminBergerM/poc-appsync-golang-mongo/log"
 	"github.com/pkg/errors"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

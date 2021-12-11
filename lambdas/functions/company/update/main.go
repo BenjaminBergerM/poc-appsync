@@ -2,11 +2,12 @@ package main
 
 import (
 	"context"
+
+	inj "github.com/BenjaminBergerM/poc-appsync-golang-mongo/functions/company"
+	"github.com/BenjaminBergerM/poc-appsync-golang-mongo/log"
+	companymodel "github.com/BenjaminBergerM/poc-appsync-golang-mongo/model/company"
+	servicecompany "github.com/BenjaminBergerM/poc-appsync-golang-mongo/service/company"
 	"github.com/aws/aws-lambda-go/lambda"
-	inj "github.com/jjoc007/poc-appsync-golang-mongo/functions/company"
-	"github.com/jjoc007/poc-appsync-golang-mongo/log"
-	companymodel "github.com/jjoc007/poc-appsync-golang-mongo/model/company"
-	servicecompany "github.com/jjoc007/poc-appsync-golang-mongo/service/company"
 )
 
 func LambdaHandler(cxt context.Context, company *companymodel.Company) (*companymodel.Company, error) {
